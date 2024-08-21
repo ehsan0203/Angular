@@ -1,0 +1,58 @@
+/* تنظیمات کلی نوبار */
+.navbar {
+    background-color: #333; /* رنگ پس زمینه نوبار */
+    position: relative; /* نوبار را در بالای صفحه ثابت می‌کند */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* تضمین می‌کند که نوبار در بالای سایر عناصر باقی بماند */
+  }
+  
+  .navbar ul {
+    list-style-type: none; /* حذف نقاط بولت از لیست */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex; /* ایجاد نمایش افقی برای آیتم‌های نوبار */
+    justify-content: center; /* قرار دادن آیتم‌ها در وسط نوبار */
+  }
+  
+  .navbar li {
+    display: inline; /* نمایش آیتم‌ها به صورت خطی */
+    padding: 14px 20px;
+  }
+  
+  .navbar a {
+    color: white; /* رنگ متن لینک‌ها */
+    text-align: center;
+    text-decoration: none; /* حذف خط زیر لینک‌ها */
+    padding: 14px 20px;
+    display: block;
+  }
+  
+  .navbar a:hover {
+    background-color: #111; /* تغییر رنگ پس‌زمینه لینک‌ها هنگام هاور */
+  }
+  
+  .active {
+    background-color: #4CAF50; /* رنگ پس زمینه برای لینک فعال */
+  }
+  
+  /* تنظیمات برای جلوگیری از هم‌پوشانی نوبار با محتوای اصلی */
+  .router-outlet {
+    padding-top: 60px; /* ایجاد فاصله از بالای صفحه */
+  }
+  body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: "Vazir", sans-serif;
+}
+
+  h1,
+  h2 {
+    color: #ffffff;
+  }
+
+  .btn-primary {
+    background-color: #6f42c1;
+    border-color: #6f42c1;
+  }

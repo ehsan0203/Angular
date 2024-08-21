@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/dist/css/bootstrap.rtl.min.css";
+@import "../node_modules/@fortawesome/fontawesome-free/css/all.min.css";
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: "Vazir", sans-serif;
+}
+
+  h1,
+  h2 {
+    color: #ffffff;
+  }
+
+  .btn-primary {
+    background-color: #6f42c1;
+    border-color: #6f42c1;
+  }
