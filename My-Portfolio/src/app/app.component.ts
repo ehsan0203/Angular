@@ -1,6 +1,6 @@
 import { Component,Renderer2  } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
-import { Router } from '@angular/router';
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-root',
@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 
 export class AppComponent {
   constructor(private router: Router, private renderer: Renderer2) {}
-
+  title = 'احسان چیت ساز';
   isLinkActive(url: string): boolean {
     return this.router.url === url;
   }
