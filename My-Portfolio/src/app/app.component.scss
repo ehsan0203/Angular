@@ -56,3 +56,65 @@
     background-color: #6f42c1;
     border-color: #6f42c1;
   }
+  .fixed-links {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 5px;
+  background-color: #22222283;
+  border-radius: 0 10px 10px 0;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+z-index: 100000;
+}
+
+.fixed-links a {
+  text-decoration: none;
+  padding: 5px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.fixed-links a i {
+  font-size: 24px;
+}
+
+/* رنگ‌های اختصاصی برای هر آیکون */
+.fixed-links a i.fa-instagram {
+  color: #E4405F; /* رنگ اینستاگرام */
+}
+
+.fixed-links a i.fa-telegram-plane {
+  color: #0088cc; /* رنگ تلگرام */
+}
+
+.fixed-links a i.fa-linkedin {
+  color: #0077b5; /* رنگ لینکدین */
+}
+
+.fixed-links a i.fa-github {
+  color: #333; /* رنگ گیت‌هاب */
+}
+
+/* انیمیشن هاور برای برجسته کردن آیکون‌ها */
+.fixed-links a:hover {
+  transform: scale(1.2);
+}
+
+.fixed-links a:hover i.fa-instagram {
+  color: #C13584;
+}
+
+.fixed-links a:hover i.fa-telegram-plane {
+  color: #229ED9;
+}
+
+.fixed-links a:hover i.fa-linkedin {
+  color: #005582;
+}
+
+.fixed-links a:hover i.fa-github {
+  color: #6e5494;
+}

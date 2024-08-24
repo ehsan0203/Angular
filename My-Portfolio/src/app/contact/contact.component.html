@@ -18,7 +18,7 @@
         </div>
       </div>
 
-      <form class="mt-5">
+      <form class="mt-5" (ngSubmit)="onSubmit()" #contactForm="ngForm">
         <div class="mb-3">
           <label for="name" class="form-label">نام شما</label>
           <div class="input-group">
@@ -29,7 +29,10 @@
               type="text"
               class="form-control"
               id="name"
+              [(ngModel)]="name"
+              name="name"
               placeholder="نام خود را وارد کنید"
+              required
             />
           </div>
         </div>
@@ -43,7 +46,10 @@
               type="email"
               class="form-control"
               id="email"
+              [(ngModel)]="email"
+              name="email"
               placeholder="ایمیل خود را وارد کنید"
+              required
             />
           </div>
         </div>
@@ -56,12 +62,25 @@
             <textarea
               class="form-control"
               id="message"
+              [(ngModel)]="message"
+              name="message"
               rows="4"
               placeholder="پیام خود را وارد کنید"
+              required
             ></textarea>
           </div>
         </div>
-        <button type="submit" class="btn btn-primary w-100">ارسال پیام</button>
+        <button
+          type="submit"
+          class="btn btn-primary w-100"
+          [disabled]="loading"
+        >
+          <span
+            *ngIf="loading"
+            class="spinner-border spinner-border-sm me-2"
+          ></span>
+          ارسال پیام
+        </button>
       </form>
     </div>
   </div>
