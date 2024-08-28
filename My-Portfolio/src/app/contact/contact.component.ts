@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Meta, Title } from '@angular/platform-browser';
 import { Smsir } from 'sms-typescript/lib';
 
 @Component({
@@ -17,7 +18,7 @@ export class ContactComponent implements OnInit {
   message: string = '';
   loading: boolean = false;
 
-  constructor() {
+  constructor(private titleService: Title, private metaService: Meta) {
     // مقداردهی سرویس پیامک با استفاده از کلید دسترسی و شماره خط
     this.smsWebService = new Smsir(
       'C2hEujCMit84yRvWAhKhoDmhAdnG9nBe7BgJn1sUMm0w8dLoYR5YN1fCcKbfl7o5', // کلید دسترسی شما
@@ -25,7 +26,13 @@ export class ContactComponent implements OnInit {
     );
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.titleService.setTitle('تماس با احسان چیت‌ساز | ارتباط با طراح و برنامه‌نویس وب');
+    this.metaService.updateTag({ name: 'description', content: 'برای ارتباط با احسان چیت‌ساز، طراح و برنامه‌نویس وب حرفه‌ای، و دریافت اطلاعات بیشتر، لطفاً از طریق ایمیل یا شماره تماس ذکر شده در این صفحه اقدام نمایید.' });
+    this.metaService.updateTag({ name: 'keywords', content: 'تماس با احسان چیت‌ساز, طراح وب, برنامه‌نویس وب, اطلاعات تماس, ایمیل, شماره تماس' });
+    this.metaService.updateTag({ property: 'og:title', content: 'تماس با احسان چیت‌ساز | ارتباط با طراح و برنامه‌نویس وب' });
+    this.metaService.updateTag({ property: 'og:description', content: 'احسان چیت‌ساز، متخصص طراحی و برنامه‌نویسی وب حرفه‌ای، آماده پاسخگویی به سوالات شما از طریق ایمیل و شماره تماس می‌باشد.' });
+  }
 
   onSubmit() {
     this.loading = true;
