@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
+import { MatExpansionModule } from '@angular/material/expansion';
 import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-billboard',
   standalone: true,
-  imports: [],
+  imports: [MatExpansionModule],
   templateUrl: './billboard.component.html',
   styleUrl: './billboard.component.scss'
 })
